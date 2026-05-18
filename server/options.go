@@ -42,13 +42,6 @@ type Options struct {
 	// Rewrite the index template (optional)
 	IndexRewrite func(string) string
 
-	// Favicon specifies a custom favicon. Accepts a local file path (e.g.
-	// "/path/to/favicon.png"), an HTTP(S) URL, or a base64 data URI.
-	// A local file path is read at startup, converted to an inline data URI,
-	// and injected into the HTML template. Empty string (default) keeps the
-	// built-in favicon.ico / icon.svg.
-	Favicon string `hcl:"favicon" flagName:"favicon" flagDescribe:"Custom favicon (file path, URL, or data URI)" default:""`
-
 	// Terminal preferences — font, colors, cursor, theme, and palette.
 	// These are sent to the browser on each WebSocket connection.
 	// Users set them in the config file inside a `preferences { ... }` block.
